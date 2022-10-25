@@ -1,4 +1,4 @@
-RISCV_PREFIX  = riscv32-unknown-elf
+RISCV_PREFIX  = riscv64-unknown-elf
 RISCV_GCC     = $(RISCV_PREFIX)-gcc
 RISCV_OBJDUMP = $(RISCV_PREFIX)-objdump
 RISCV_OBJCOPY = $(RISCV_PREFIX)-objcopy
@@ -8,7 +8,7 @@ MABI  = ilp32
 
 STARTUP  ?= ../common/crt0.S
 SYSCALLS ?= ../common/syscalls.c
-LDSCRIPT ?= ../common/sim.ld
+LDSCRIPT ?= ../common/soc.ld
 APP_EXE  ?= out
 APP_SRC  ?= $(wildcard ./*.c) $(wildcard ./*.cpp) $(wildcard ./*.s) $(wildcard ./*.S) $(STARTUP) $(SYSCALLS)
 
